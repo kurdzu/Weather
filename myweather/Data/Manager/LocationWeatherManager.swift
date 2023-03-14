@@ -16,7 +16,7 @@ enum NetworkError: Error {
 class LocationWeatherManager {
     
     static let shared = LocationWeatherManager()
-    private let key = "1c2ba745810db56a9f945361a2520a0a"
+    private let key = "17d851020051493aa9518d733e996825"
     
     private init() {}
  
@@ -25,6 +25,7 @@ class LocationWeatherManager {
             completion(.failure(.serverError))
             return
         }
+        print(url)
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data, error == nil else {
@@ -43,10 +44,11 @@ class LocationWeatherManager {
     
     func getDailyWeather(lat:Double,lon:Double,locale: String, completion: @escaping (Result<DailyWeather,NetworkError>) -> ()) {
         
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=53.9024716&lon=27.5618225&exclude=minutely&units=metric&appid=1c2ba745810db56a9f945361a2520a0a") else {
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(lat)&lon=\(lon)&exclude=minutely&units=metric&appid=\(key)") else {
             completion(.failure(.serverError))
             return
         }
+        print(url)
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data, error == nil else {
                 completion(.failure(.serverError))
