@@ -1,0 +1,12 @@
+
+Showing All Messages
+PackageIndex.findPackages failed: featureDisabled
+
+PackageIndex.findPackages failed: featureDisabled
+
+
+lottie-ios
+
+
+
+Resolving Package Graph Succeeded    17.02.23, 13:40    1.1 seconds

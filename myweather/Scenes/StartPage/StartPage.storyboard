@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start Page View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="StartPage" id="Y6W-OH-hqX" customClass="StartPageViewController" customModule="myweather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mtj-Uv-eIb">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08C-1n-UnU">
+                                        <rect key="frame" x="0.0" y="154.66666666666663" width="393" height="450"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudIcon" translatesAutoresizingMaskIntoConstraints="NO" id="u31-hr-pjJ">
+                                                <rect key="frame" x="15" y="8" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="Rhn-hk-p4Z"/>
+                                                    <constraint firstAttribute="width" constant="60" id="ila-Q3-A2Z"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" მოგესალმებით !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqK-DB-Ors">
+                                                <rect key="frame" x="15" y="83.000000000000028" width="363" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="eId-7g-WWd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="მოგესალმებით აპლიკაცია შეუქმნა ომარი ქატამაძის მიერ სატესტო დავალების შესრულების მიზნით" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlF-zp-nLD">
+                                                <rect key="frame" x="15" y="153.00000000000003" width="363" height="61"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="IlF-zp-nLD" firstAttribute="top" secondItem="tqK-DB-Ors" secondAttribute="bottom" constant="20" id="6TR-9w-Nnq"/>
+                                            <constraint firstAttribute="trailing" secondItem="IlF-zp-nLD" secondAttribute="trailing" constant="15" id="Dy8-PH-q9L"/>
+                                            <constraint firstAttribute="height" constant="450" id="Mx3-UE-BPR"/>
+                                            <constraint firstItem="tqK-DB-Ors" firstAttribute="leading" secondItem="08C-1n-UnU" secondAttribute="leading" constant="15" id="cFd-RQ-vZ5"/>
+                                            <constraint firstItem="tqK-DB-Ors" firstAttribute="leading" secondItem="u31-hr-pjJ" secondAttribute="leading" id="cse-o5-87K"/>
+                                            <constraint firstItem="u31-hr-pjJ" firstAttribute="top" secondItem="08C-1n-UnU" secondAttribute="top" constant="8" id="gkf-dY-9jA"/>
+                                            <constraint firstItem="tqK-DB-Ors" firstAttribute="top" secondItem="u31-hr-pjJ" secondAttribute="bottom" constant="15" id="rtd-P5-VFY"/>
+                                            <constraint firstAttribute="trailing" secondItem="tqK-DB-Ors" secondAttribute="trailing" constant="15" id="sHy-Va-d6s"/>
+                                            <constraint firstItem="IlF-zp-nLD" firstAttribute="leading" secondItem="08C-1n-UnU" secondAttribute="leading" constant="15" id="vUS-Gp-UvN"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoN-sB-qnj">
+                                        <rect key="frame" x="15" y="644" width="363" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="xAD-Mo-Fvg"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="გაგრძელება">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTabContinue:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1GK-6n-0SM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="08C-1n-UnU" firstAttribute="centerY" secondItem="Mtj-Uv-eIb" secondAttribute="centerY" id="0ra-vF-p4A"/>
+                                    <constraint firstAttribute="trailing" secondItem="PoN-sB-qnj" secondAttribute="trailing" constant="15" id="Ir5-4t-TTt"/>
+                                    <constraint firstAttribute="trailing" secondItem="08C-1n-UnU" secondAttribute="trailing" id="Mlt-rQ-YqQ"/>
+                                    <constraint firstItem="PoN-sB-qnj" firstAttribute="top" secondItem="08C-1n-UnU" secondAttribute="bottom" constant="39.333333333333371" id="YVp-mu-XMK"/>
+                                    <constraint firstItem="08C-1n-UnU" firstAttribute="leading" secondItem="Mtj-Uv-eIb" secondAttribute="leading" id="h89-4I-Fbr"/>
+                                    <constraint firstItem="08C-1n-UnU" firstAttribute="centerX" secondItem="Mtj-Uv-eIb" secondAttribute="centerX" id="kKM-jB-7WG"/>
+                                    <constraint firstItem="PoN-sB-qnj" firstAttribute="leading" secondItem="Mtj-Uv-eIb" secondAttribute="leading" constant="15" id="qXm-Dr-rg3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Mtj-Uv-eIb" secondAttribute="bottom" id="FJq-xu-D4h"/>
+                            <constraint firstItem="Mtj-Uv-eIb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Wvj-lS-zb5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Mtj-Uv-eIb" secondAttribute="trailing" id="a3e-NU-yO6"/>
+                            <constraint firstItem="Mtj-Uv-eIb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ebM-UP-Yh2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="PoN-sB-qnj" id="NvZ-gR-gec"/>
+                        <outlet property="imageIcon" destination="u31-hr-pjJ" id="OMH-qk-4fp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloudIcon" width="897" height="897"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
