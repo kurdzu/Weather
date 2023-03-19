@@ -30,6 +30,8 @@ class WeatherViewController: UIViewController {
     
     @IBOutlet weak var dailyCollectionView: UICollectionView!
     
+    @IBOutlet weak var hourlyCollectionView: UICollectionView!
+    
     //MARK: - vars/lets
     private let refreshControl = UIRefreshControl()
     var viewModel = WeatherViewModel()
@@ -59,10 +61,7 @@ class WeatherViewController: UIViewController {
         vc.viewModel.delegate = self.viewModel
         present(vc, animated: true, completion: nil)
         
-//        guard let controller = storyboard?.instantiateViewController(withIdentifier: "SearchPage") as? SearchViewController else { return }
-//       // controller.viewModel.delegate = self.viewModel
-//        controller.modalPresentationStyle = .overFullScreen
-//        present(controller, animated: true, completion: nil)
+
 
     }
     //MARK: - flow func
@@ -121,7 +120,13 @@ class WeatherViewController: UIViewController {
         dailyCollectionView.dataSource = self
         dailyCollectionView.register(UINib(nibName: "testDailyCollectionViewCell", bundle: nil),
                                      forCellWithReuseIdentifier: "testDailyCollectionViewCell")
-      //  dailyCollectionView.register(testDailyCollectionViewCell.self, forCellWithReuseIdentifier: "testDailyCollectionViewCell")
+        
+        hourlyCollectionView.delegate = self
+        hourlyCollectionView.dataSource = self
+        hourlyCollectionView.register(UINib(nibName: "HourlyCollectionViewCell", bundle: nil),
+                                     forCellWithReuseIdentifier: "HourlyCollectionViewCell")
+
+     
     }
     
     private func refreshControllSettings() {
@@ -172,10 +177,10 @@ class WeatherViewController: UIViewController {
         
         
         self.viewModel.reloadCollectionView = {
-        //    DispatchQueue. main.async {
+            DispatchQueue.main.async {
               self.dailyCollectionView.reloadData()
-           //  self.hourlyCollectionView.reloadData()
-          //  }
+           self.hourlyCollectionView.reloadData()
+         }
         }
   
         viewModel.addWeatherSettings()
@@ -201,17 +206,31 @@ extension WeatherViewController : UICollectionViewDataSource{
         }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let dailyCell = dailyCollectionView.dequeueReusableCell(withReuseIdentifier: "testDailyCollectionViewCell", for: indexPath) as? testDailyCollectionViewCell
-        else { return UICollectionViewCell ()}
         
-        return viewModel.dailyConfigureCell(cell: dailyCell, indexPath: indexPath)
+      
+            if collectionView == hourlyCollectionView {
+                guard let hourlyCell = hourlyCollectionView.dequeueReusableCell(withReuseIdentifier: "HourlyCollectionViewCell", for: indexPath) as? HourlyCollectionViewCell
+                else { return UICollectionViewCell ()}
+                
+                return viewModel.hourlyConfigureCell(cell: hourlyCell, indexPath: indexPath)
+                
+            }else{
+                
+                guard let dailyCell = dailyCollectionView.dequeueReusableCell(withReuseIdentifier: "testDailyCollectionViewCell", for: indexPath) as? testDailyCollectionViewCell
+                else { return UICollectionViewCell ()}
+                
+                return viewModel.dailyConfigureCell(cell: dailyCell, indexPath: indexPath)
+            }
+            
+        
+    
      
     }
 }
 extension WeatherViewController : UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
+  
         if collectionView == dailyCollectionView {
             return CGSize(width: 128, height: 50)
         } else {

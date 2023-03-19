@@ -81,12 +81,12 @@ class WeatherViewModel {
         return cell
     }
 
-//
-//    func hourlyConfigureCell (cell: HourlyCollectionViewCell, indexPath: IndexPath) -> HourlyCollectionViewCell {
-//        cell.configure(hourly: weather.dailyWeather!.hourly[indexPath.row], indexPath: indexPath.row)
-//        cell.hourlyTime.text = dateFormater(date: (weather.dailyWeather!.hourly[indexPath.row].dt), dateFormat: "HH:mm")
-//        return cell
-//    }
+
+    func hourlyConfigureCell (cell: HourlyCollectionViewCell, indexPath: IndexPath) -> HourlyCollectionViewCell {
+        cell.configure(hourly: weather.dailyWeather!.hourly[indexPath.row], indexPath: indexPath.row)
+        cell.hourlyTime.text = dateFormater(date: (weather.dailyWeather!.hourly[indexPath.row].dt), dateFormat: "HH:mm")
+        return cell
+    }
     
 }
 //MARK: - Extensions

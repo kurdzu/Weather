@@ -392,7 +392,26 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBN-4q-zGt" userLabel="Time">
                                                 <rect key="frame" x="0.0" y="654.33333333333337" width="414" height="163.66666666666663"/>
+                                                <subviews>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ae8-C3-JFp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="163.66666666666666"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="em7-m7-2oC">
+                                                            <size key="itemSize" width="128" height="128"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells/>
+                                                    </collectionView>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="ae8-C3-JFp" secondAttribute="trailing" id="ESF-7Z-3Sv"/>
+                                                    <constraint firstItem="ae8-C3-JFp" firstAttribute="leading" secondItem="OBN-4q-zGt" secondAttribute="leading" id="H3f-XE-eFU"/>
+                                                    <constraint firstItem="ae8-C3-JFp" firstAttribute="top" secondItem="OBN-4q-zGt" secondAttribute="top" id="j3p-fy-Yvb"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ae8-C3-JFp" secondAttribute="bottom" id="scS-E6-uTl"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <constraints>
@@ -447,6 +466,7 @@
                         <outlet property="currentTime" destination="2eO-vg-d05" id="F4S-Pb-PfS"/>
                         <outlet property="currentWindSpeed" destination="fXk-ga-Vov" id="kCt-se-w4D"/>
                         <outlet property="dailyCollectionView" destination="Hng-Dc-GuP" id="INo-8O-BGe"/>
+                        <outlet property="hourlyCollectionView" destination="ae8-C3-JFp" id="wSW-zK-Vif"/>
                         <outlet property="navigationBar" destination="ehc-ts-c0g" id="4mh-2f-N19"/>
                         <outlet property="shadowConteinerView" destination="kb5-eu-4xF" id="WuI-3M-dcM"/>
                         <outlet property="updateScrollView" destination="kWe-XV-2oE" id="jNb-9l-Zf1"/>
