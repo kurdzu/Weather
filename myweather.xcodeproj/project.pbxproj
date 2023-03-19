@@ -183,6 +183,13 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		F45B240E29C780AA005D31F6 /* BackgroundVideo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BackgroundVideo;
+			sourceTree = "<group>";
+		};
 		F4802708299E29880036BC83 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +226,7 @@
 		F480272B299E29D90036BC83 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				F45B240E29C780AA005D31F6 /* BackgroundVideo */,
 				F4B77E7D299F9947007EEAB5 /* sunLoad.json */,
 				F49A498F299F8ACB00AF6382 /* video */,
 				F4802720299E298A0036BC83 /* Assets.xcassets */,
