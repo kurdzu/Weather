@@ -47,6 +47,8 @@ class SearchViewController: UIViewController {
         searchBar.searchTextField.textColor = .white
         searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Search", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         
+        searchBar.tintColor = .white
+  
         view.backgroundColor = .clear
         searchNavigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         searchNavigationBar.topItem?.title = "Location".localize

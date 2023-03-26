@@ -10,7 +10,7 @@ import Network
 import CoreLocation
 
 enum keys {
-    static let firstStart = "firstStart"
+    static let firstStartApp = "firstStartApp"
 }
 
 class LoadingViewModel: NSObject {
@@ -28,7 +28,7 @@ class LoadingViewModel: NSObject {
     func checkFirstStart(){
         showLoading?()
         CityModel.shared.getCity()
-        if  UserDefaults.standard.value(forKey: keys.firstStart) == nil {
+        if  UserDefaults.standard.value(forKey: keys.firstStartApp) == nil {
             loadStartController?()
         } else {
             checkNetwork()

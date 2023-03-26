@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F4127817299FBA5C0055E170 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4127816299FBA5C0055E170 /* Bindable.swift */; };
-		F44E70B6299FA42900D6D6D4 /* background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F44E70B5299FA42900D6D6D4 /* background.mp4 */; };
 		F44E70B9299FA61500D6D6D4 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44E70B8299FA61500D6D6D4 /* WeatherViewController.swift */; };
 		F44E70BC299FA63D00D6D6D4 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44E70BB299FA63D00D6D6D4 /* WeatherViewModel.swift */; };
 		F44E70BE299FA73300D6D6D4 /* WeatherPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44E70BD299FA73300D6D6D4 /* WeatherPage.storyboard */; };
@@ -19,6 +18,7 @@
 		F455676B29B0953300029501 /* SelfLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F455676929B0953300029501 /* SelfLocationTableViewCell.xib */; };
 		F455676D29B0993600029501 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F455676C29B0993600029501 /* NSObject+Extension.swift */; };
 		F456E0D829A9D8BC0083AB1E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456E0D729A9D8BC0083AB1E /* SearchViewController.swift */; };
+		F45B241029C780FE005D31F6 /* background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F45B240F29C780F9005D31F6 /* background.mp4 */; };
 		F4802715299E29880036BC83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4802714299E29880036BC83 /* AppDelegate.swift */; };
 		F4802717299E29880036BC83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4802716299E29880036BC83 /* SceneDelegate.swift */; };
 		F480271F299E29880036BC83 /* myweather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F480271D299E29880036BC83 /* myweather.xcdatamodeld */; };
@@ -55,7 +55,6 @@
 
 /* Begin PBXFileReference section */
 		F4127816299FBA5C0055E170 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
-		F44E70B5299FA42900D6D6D4 /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = background.mp4; path = ../../../../YourWeather/YourWeather/Resourses/video/background.mp4; sourceTree = "<group>"; };
 		F44E70B8299FA61500D6D6D4 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		F44E70BB299FA63D00D6D6D4 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		F44E70BD299FA73300D6D6D4 /* WeatherPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeatherPage.storyboard; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		F455676929B0953300029501 /* SelfLocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfLocationTableViewCell.xib; sourceTree = "<group>"; };
 		F455676C29B0993600029501 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		F456E0D729A9D8BC0083AB1E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F45B240F29C780F9005D31F6 /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.mp4; sourceTree = "<group>"; };
 		F4802711299E29880036BC83 /* myweather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myweather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4802714299E29880036BC83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4802716299E29880036BC83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +186,7 @@
 		F45B240E29C780AA005D31F6 /* BackgroundVideo */ = {
 			isa = PBXGroup;
 			children = (
+				F45B240F29C780F9005D31F6 /* background.mp4 */,
 			);
 			path = BackgroundVideo;
 			sourceTree = "<group>";
@@ -228,7 +229,6 @@
 			children = (
 				F45B240E29C780AA005D31F6 /* BackgroundVideo */,
 				F4B77E7D299F9947007EEAB5 /* sunLoad.json */,
-				F49A498F299F8ACB00AF6382 /* video */,
 				F4802720299E298A0036BC83 /* Assets.xcassets */,
 			);
 			path = Resourses;
@@ -399,14 +399,6 @@
 			path = CurrentWeather;
 			sourceTree = "<group>";
 		};
-		F49A498F299F8ACB00AF6382 /* video */ = {
-			isa = PBXGroup;
-			children = (
-				F44E70B5299FA42900D6D6D4 /* background.mp4 */,
-			);
-			path = video;
-			sourceTree = "<group>";
-		};
 		F4B5039029ADF3C10090D4AF /* WeatherCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,9 +511,9 @@
 				F4B77E7E299F9947007EEAB5 /* sunLoad.json in Resources */,
 				F455676B29B0953300029501 /* SelfLocationTableViewCell.xib in Resources */,
 				F4802724299E298A0036BC83 /* LaunchScreen.storyboard in Resources */,
+				F45B241029C780FE005D31F6 /* background.mp4 in Resources */,
 				F4802721299E298A0036BC83 /* Assets.xcassets in Resources */,
 				F4FE58EE29C062460032E78C /* HourlyCollectionViewCell.xib in Resources */,
-				F44E70B6299FA42900D6D6D4 /* background.mp4 in Resources */,
 				F44E70BE299FA73300D6D6D4 /* WeatherPage.storyboard in Resources */,
 				F4DFE16329B32ED800715FAA /* city.json in Resources */,
 				F4B5039A29AE393F0090D4AF /* testDailyCollectionViewCell.xib in Resources */,

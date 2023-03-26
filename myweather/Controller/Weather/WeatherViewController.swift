@@ -38,8 +38,7 @@ class WeatherViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-     //   UserDefaults.standard.set(true, forKey: keys.firstStart)
-    
+      UserDefaults.standard.set(true, forKey: keys.firstStartApp)
         bind()
     refreshControllSettings()
     }
