@@ -55,7 +55,7 @@
 
 /* Begin PBXFileReference section */
 		F4127816299FBA5C0055E170 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
-		F44E70B8299FA61500D6D6D4 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		F44E70B8299FA61500D6D6D4 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherViewController.swift; path = ../../Controller/Weather/WeatherViewController.swift; sourceTree = "<group>"; };
 		F44E70BB299FA63D00D6D6D4 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		F44E70BD299FA73300D6D6D4 /* WeatherPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeatherPage.storyboard; sourceTree = "<group>"; };
 		F455675F29B08C5A00029501 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -113,21 +113,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F44E70B7299FA5F600D6D6D4 /* Weather */ = {
-			isa = PBXGroup;
-			children = (
-				F44E70BA299FA61E00D6D6D4 /* ViewModel */,
-				F44E70B8299FA61500D6D6D4 /* WeatherViewController.swift */,
-			);
-			path = Weather;
-			sourceTree = "<group>";
-		};
 		F44E70BA299FA61E00D6D6D4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				F44E70BB299FA63D00D6D6D4 /* WeatherViewModel.swift */,
 			);
-			path = ViewModel;
+			name = ViewModel;
+			path = ../../Controller/Weather/ViewModel;
 			sourceTree = "<group>";
 		};
 		F455675E29B08C4200029501 /* ViewModel */ = {
@@ -165,18 +157,11 @@
 			path = SelfLocationTableViewCell;
 			sourceTree = "<group>";
 		};
-		F456E0D929A9D8C30083AB1E /* Search */ = {
+		F456E0DA29A9D8DD0083AB1E /* Search */ = {
 			isa = PBXGroup;
 			children = (
 				F455675E29B08C4200029501 /* ViewModel */,
 				F456E0D729A9D8BC0083AB1E /* SearchViewController.swift */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		F456E0DA29A9D8DD0083AB1E /* Search */ = {
-			isa = PBXGroup;
-			children = (
 				F455676129B08FB500029501 /* TableViewCell */,
 				F4B663B329AA31CF00ED627C /* SearchPage.storyboard */,
 			);
@@ -212,8 +197,6 @@
 			children = (
 				F480272E299E2CE00036BC83 /* App */,
 				F4802739299E4AE50036BC83 /* Model */,
-				F49A495E299F69A500AF6382 /* Controller */,
-				F456E0D929A9D8C30083AB1E /* Search */,
 				F49A4960299F6A8200AF6382 /* Data */,
 				F480272D299E2CCD0036BC83 /* Scenes */,
 				F49A495F299F69F500AF6382 /* Extensions */,
@@ -276,9 +259,11 @@
 		F4802731299E3A260036BC83 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				F44E70BA299FA61E00D6D6D4 /* ViewModel */,
+				F44E70B8299FA61500D6D6D4 /* WeatherViewController.swift */,
+				F44E70BD299FA73300D6D6D4 /* WeatherPage.storyboard */,
 				F4FE58EA29C061F00032E78C /* HourlyCollectionViewCell */,
 				F4B5039029ADF3C10090D4AF /* WeatherCollectionViewCell */,
-				F44E70BD299FA73300D6D6D4 /* WeatherPage.storyboard */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -302,19 +287,11 @@
 		F49A495D299F699200AF6382 /* StartPage */ = {
 			isa = PBXGroup;
 			children = (
+				F4B77E80299F9A00007EEAB5 /* ViewModel */,
+				F49A4962299F6BB900AF6382 /* StartPageViewController.swift */,
 				F4B77E85299F9BE0007EEAB5 /* StartPage.storyboard */,
 			);
 			path = StartPage;
-			sourceTree = "<group>";
-		};
-		F49A495E299F69A500AF6382 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F49A496B299F6FB600AF6382 /* Loading */,
-				F4B77E7F299F99F2007EEAB5 /* StartPage */,
-				F44E70B7299FA5F600D6D6D4 /* Weather */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		F49A495F299F69F500AF6382 /* Extensions */ = {
@@ -343,16 +320,9 @@
 		F49A4968299F6F1C00AF6382 /* Loading */ = {
 			isa = PBXGroup;
 			children = (
-				F49A4969299F6F3400AF6382 /* Loading.storyboard */,
-			);
-			path = Loading;
-			sourceTree = "<group>";
-		};
-		F49A496B299F6FB600AF6382 /* Loading */ = {
-			isa = PBXGroup;
-			children = (
 				F49A496C299F6FC600AF6382 /* ViewModel */,
 				F49A4966299F6F1300AF6382 /* LoadingViewController.swift */,
+				F49A4969299F6F3400AF6382 /* Loading.storyboard */,
 			);
 			path = Loading;
 			sourceTree = "<group>";
@@ -406,15 +376,6 @@
 				F4B5039829AE393F0090D4AF /* testDailyCollectionViewCell.xib */,
 			);
 			path = WeatherCollectionViewCell;
-			sourceTree = "<group>";
-		};
-		F4B77E7F299F99F2007EEAB5 /* StartPage */ = {
-			isa = PBXGroup;
-			children = (
-				F4B77E80299F9A00007EEAB5 /* ViewModel */,
-				F49A4962299F6BB900AF6382 /* StartPageViewController.swift */,
-			);
-			path = StartPage;
 			sourceTree = "<group>";
 		};
 		F4B77E80299F9A00007EEAB5 /* ViewModel */ = {
