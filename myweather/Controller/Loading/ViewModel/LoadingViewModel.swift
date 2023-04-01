@@ -28,10 +28,12 @@ class LoadingViewModel: NSObject {
     func checkFirstStart(){
         showLoading?()
         CityModel.shared.getCity()
-        if  UserDefaults.standard.value(forKey: keys.firstStartApp) == nil {
+        loadStartController?()
+     
+       if  UserDefaults.standard.bool(forKey: keys.firstStartApp)  {
             loadStartController?()
         } else {
-            checkNetwork()
+           checkNetwork()
         }
     }
     
