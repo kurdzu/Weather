@@ -50,7 +50,7 @@ class WeatherViewModel {
         self.reloadCollectionView?()
     }
 
-    func getWeather () {
+func getWeather () {
         if weather.lat != nil && weather.lon != nil {
             weather.withGeolocationWeather {
                 self.addWeatherSettings()
