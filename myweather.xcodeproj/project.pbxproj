@@ -96,7 +96,7 @@
 		F4B77E85299F9BE0007EEAB5 /* StartPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartPage.storyboard; sourceTree = "<group>"; };
 		F4C4EC0429A12E8C007AC422 /* LocationWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationWeatherManager.swift; path = myweather/Data/Manager/LocationWeatherManager.swift; sourceTree = SOURCE_ROOT; };
 		F4C4EC0629A12EE6007AC422 /* NoLocationWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoLocationWeatherManager.swift; path = myweather/Data/Manager/NoLocationWeatherManager.swift; sourceTree = SOURCE_ROOT; };
-		F4DFE16229B32ED800715FAA /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = city.json; path = "../../../YourWeather-main/YourWeather/Data/city.json"; sourceTree = "<group>"; };
+		F4DFE16229B32ED800715FAA /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = city.json; path = /Users/kurdzu/Desktop/myweather/myweather/Data/city.json; sourceTree = "<absolute>"; };
 		F4FE58EB29C062460032E78C /* HourlyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCollectionViewCell.swift; sourceTree = "<group>"; };
 		F4FE58EC29C062460032E78C /* HourlyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
