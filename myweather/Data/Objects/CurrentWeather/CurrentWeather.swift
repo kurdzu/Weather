@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CurrentWeather: Codable {
+struct CurrentWeather: Codable {
     let coord: Coord
     let weather: [Weather]
     let main: Main
@@ -19,25 +19,32 @@ class CurrentWeather: Codable {
     let name: String
 }
 
-class Coord: Codable {
+struct Coord: Codable {
     let lon, lat: Double
 }
 
-class Weather: Codable {
+struct Weather: Codable {
     let id: Int
     let description, icon: String
 }
 
-class Main: Codable {
+struct Main: Codable {
     let temp, feels_like, temp_min, temp_max: Double
     let pressure, humidity: Double
+    
+    enum Main : String, CodingKey{
+        case Temp
+        case FeelsLike
+        case TempMin
+        case TempMax
+    }
 }
 
-class Wind: Codable {
+struct Wind: Codable {
     let speed: Double
 }
 
-class Sys: Codable {
+struct Sys: Codable {
     let country: String
 }
 
